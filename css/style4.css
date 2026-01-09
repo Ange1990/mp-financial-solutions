@@ -1,0 +1,231 @@
+/* RESET */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* =====================
+   HEADER
+===================== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.logo {
+height: 70px;
+}
+
+nav a {
+  margin-left: 25px;
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+}
+
+/* =====================
+   PAGE HERO
+===================== */
+.page-hero {
+  position: relative;
+  height: 45vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 80px;
+}
+
+.page-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.15);
+}
+
+.page-hero h1 {
+  position: relative;
+  z-index: 1;
+  background: rgba(255,255,255,0.9);
+  padding: 25px 50px;
+  font-size: 36px;
+}
+
+/* =====================
+   CONTACT PAGE
+===================== */
+.contact-section {
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px 20px 120px;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}
+
+.contact-box,
+.legal-box {
+  background: #f7f7f7;
+  padding: 60px 50px;
+  border-left: 6px solid #000;
+}
+
+.legal-box {
+  border-left-color: #333;
+  font-size: 14px;
+  color: #555;
+}
+
+.contact-box h3,
+.legal-box h3 {
+  margin-top: 0;
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+.contact-box p,
+.legal-box p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.contact-box a {
+  color: #000;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contact-box a:hover {
+  text-decoration: underline;
+}
+
+/* =====================
+   FOOTER
+===================== */
+footer {
+  background: #111;
+  color: #aaa;
+  text-align: center;
+  padding: 30px 20px;
+  font-size: 13px;
+}
+
+/* =====================
+   ANIMATIONS
+===================== */
+.fade-in,
+.slide-up {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.8s ease;
+}
+
+/* =====================
+   RESPONSIVE
+===================== */
+@media (max-width: 900px) {
+  .page-hero h1 {
+    font-size: 28px;
+    padding: 20px 30px;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-box,
+  .legal-box {
+    padding: 40px 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+  }
+
+  nav {
+    margin-top: 15px;
+  }
+}
+/* =====================
+   CONTACT FINAL FIX
+===================== */
+.contact-section {
+  max-width: 1100px;
+  margin: auto;
+  padding: 60px 20px 120px;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+}
+
+/* ΕΝΙΑΙΟ STYLE ΓΙΑ ΚΑΙ ΤΑ ΔΥΟ BOX */
+.contact-box,
+.legal-box {
+  background: #f7f7f7;
+  padding: 60px 50px;
+  border-left: 6px solid #000;
+  color: #222;
+}
+
+/* ΙΔΙΑ ΤΥΠΟΓΡΑΦΙΑ */
+.contact-box h3,
+.legal-box h3 {
+  margin-top: 0;
+  margin-bottom: 35px;
+  font-size: 24px;
+  font-weight: 600;
+  color: #111;
+}
+
+.contact-box p,
+.legal-box p {
+  margin-bottom: 18px;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* LINKS */
+.contact-box a {
+  color: #111;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contact-box a:hover {
+  text-decoration: underline;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-box,
+  .legal-box {
+    padding: 40px 30px;
+  }
+}
